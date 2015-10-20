@@ -67,7 +67,11 @@ class SharevilleManager {
                 // Continue with next stock in array
                 self.fetchOne(stockIdsIndex + 1)
             } else {
-                // Finish
+                
+                // Sort array by symbols alphabetically
+                self.fetchedData.sortInPlace() { $0.symbol < $1.symbol }
+                
+                // Call finish
                 self.delegate?.shareville(self, didFinishFetchingData: self.fetchedData, error: nil)
             }
         }
