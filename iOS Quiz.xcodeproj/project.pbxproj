@@ -7,17 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		298FBE271BD69C45002FA3B6 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		298FBE291BD69CAA002FA3B6 /* SharevilleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE281BD69CAA002FA3B6 /* SharevilleManager.swift */; settings = {ASSET_TAGS = (); }; };
+		298FBE2C1BD69D30002FA3B6 /* SharevilleStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE2B1BD69D30002FA3B6 /* SharevilleStock.swift */; settings = {ASSET_TAGS = (); }; };
+		298FBE341BD6A2AD002FA3B6 /* Info-iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 298FBE2F1BD6A2AD002FA3B6 /* Info-iOS.plist */; settings = {ASSET_TAGS = (); }; };
+		298FBE351BD6A2AD002FA3B6 /* Info-OSX.plist in Resources */ = {isa = PBXBuildFile; fileRef = 298FBE301BD6A2AD002FA3B6 /* Info-OSX.plist */; settings = {ASSET_TAGS = (); }; };
+		298FBE361BD6A2AD002FA3B6 /* Info-watchOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 298FBE311BD6A2AD002FA3B6 /* Info-watchOS.plist */; settings = {ASSET_TAGS = (); }; };
+		298FBE371BD6A2AD002FA3B6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE331BD6A2AD002FA3B6 /* SwiftyJSON.swift */; settings = {ASSET_TAGS = (); }; };
 		29DFFA341BD6977200BED6A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DFFA331BD6977200BED6A6 /* AppDelegate.swift */; };
-		29DFFA361BD6977200BED6A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DFFA351BD6977200BED6A6 /* ViewController.swift */; };
+		29DFFA361BD6977200BED6A6 /* StocksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */; };
 		29DFFA391BD6977200BED6A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29DFFA371BD6977200BED6A6 /* Main.storyboard */; };
 		29DFFA3B1BD6977200BED6A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29DFFA3A1BD6977200BED6A6 /* Assets.xcassets */; };
 		29DFFA3E1BD6977200BED6A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29DFFA3C1BD6977200BED6A6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
+		298FBE281BD69CAA002FA3B6 /* SharevilleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharevilleManager.swift; sourceTree = "<group>"; };
+		298FBE2B1BD69D30002FA3B6 /* SharevilleStock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharevilleStock.swift; sourceTree = "<group>"; };
+		298FBE2F1BD6A2AD002FA3B6 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		298FBE301BD6A2AD002FA3B6 /* Info-OSX.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-OSX.plist"; sourceTree = "<group>"; };
+		298FBE311BD6A2AD002FA3B6 /* Info-watchOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
+		298FBE321BD6A2AD002FA3B6 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
+		298FBE331BD6A2AD002FA3B6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		29DFFA301BD6977200BED6A6 /* iOS Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DFFA331BD6977200BED6A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		29DFFA351BD6977200BED6A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksListViewController.swift; sourceTree = "<group>"; };
 		29DFFA381BD6977200BED6A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29DFFA3A1BD6977200BED6A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29DFFA3D1BD6977200BED6A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +50,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		298FBE2A1BD69CBA002FA3B6 /* Shareville */ = {
+			isa = PBXGroup;
+			children = (
+				298FBE281BD69CAA002FA3B6 /* SharevilleManager.swift */,
+				298FBE2B1BD69D30002FA3B6 /* SharevilleStock.swift */,
+			);
+			name = Shareville;
+			sourceTree = "<group>";
+		};
+		298FBE2D1BD6A298002FA3B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				298FBE2E1BD6A29E002FA3B6 /* SwiftyJSON */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		298FBE2E1BD6A29E002FA3B6 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				298FBE2F1BD6A2AD002FA3B6 /* Info-iOS.plist */,
+				298FBE301BD6A2AD002FA3B6 /* Info-OSX.plist */,
+				298FBE311BD6A2AD002FA3B6 /* Info-watchOS.plist */,
+				298FBE321BD6A2AD002FA3B6 /* SwiftyJSON.h */,
+				298FBE331BD6A2AD002FA3B6 /* SwiftyJSON.swift */,
+			);
+			name = SwiftyJSON;
+			sourceTree = "<group>";
+		};
 		29DFFA271BD6977200BED6A6 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +98,25 @@
 		29DFFA321BD6977200BED6A6 /* iOS Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				29DFFA331BD6977200BED6A6 /* AppDelegate.swift */,
-				29DFFA351BD6977200BED6A6 /* ViewController.swift */,
+				29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */,
+				298FBE2A1BD69CBA002FA3B6 /* Shareville */,
+				298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */,
 				29DFFA371BD6977200BED6A6 /* Main.storyboard */,
-				29DFFA3A1BD6977200BED6A6 /* Assets.xcassets */,
-				29DFFA3C1BD6977200BED6A6 /* LaunchScreen.storyboard */,
-				29DFFA3F1BD6977200BED6A6 /* Info.plist */,
+				29DFFA451BD6983600BED6A6 /* Supporting Files */,
 			);
 			path = "iOS Quiz";
+			sourceTree = "<group>";
+		};
+		29DFFA451BD6983600BED6A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				298FBE2D1BD6A298002FA3B6 /* Frameworks */,
+				29DFFA3F1BD6977200BED6A6 /* Info.plist */,
+				29DFFA3C1BD6977200BED6A6 /* LaunchScreen.storyboard */,
+				29DFFA3A1BD6977200BED6A6 /* Assets.xcassets */,
+				29DFFA331BD6977200BED6A6 /* AppDelegate.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,9 +176,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				298FBE361BD6A2AD002FA3B6 /* Info-watchOS.plist in Resources */,
+				298FBE341BD6A2AD002FA3B6 /* Info-iOS.plist in Resources */,
 				29DFFA3E1BD6977200BED6A6 /* LaunchScreen.storyboard in Resources */,
 				29DFFA3B1BD6977200BED6A6 /* Assets.xcassets in Resources */,
 				29DFFA391BD6977200BED6A6 /* Main.storyboard in Resources */,
+				298FBE351BD6A2AD002FA3B6 /* Info-OSX.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +192,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29DFFA361BD6977200BED6A6 /* ViewController.swift in Sources */,
+				29DFFA361BD6977200BED6A6 /* StocksListViewController.swift in Sources */,
+				298FBE2C1BD69D30002FA3B6 /* SharevilleStock.swift in Sources */,
+				298FBE271BD69C45002FA3B6 /* StockTableViewCell.swift in Sources */,
+				298FBE371BD6A2AD002FA3B6 /* SwiftyJSON.swift in Sources */,
+				298FBE291BD69CAA002FA3B6 /* SharevilleManager.swift in Sources */,
 				29DFFA341BD6977200BED6A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +347,7 @@
 				29DFFA441BD6977200BED6A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
