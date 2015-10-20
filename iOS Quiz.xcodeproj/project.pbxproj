@@ -14,6 +14,9 @@
 		298FBE351BD6A2AD002FA3B6 /* Info-OSX.plist in Resources */ = {isa = PBXBuildFile; fileRef = 298FBE301BD6A2AD002FA3B6 /* Info-OSX.plist */; settings = {ASSET_TAGS = (); }; };
 		298FBE361BD6A2AD002FA3B6 /* Info-watchOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 298FBE311BD6A2AD002FA3B6 /* Info-watchOS.plist */; settings = {ASSET_TAGS = (); }; };
 		298FBE371BD6A2AD002FA3B6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE331BD6A2AD002FA3B6 /* SwiftyJSON.swift */; settings = {ASSET_TAGS = (); }; };
+		298FBE3A1BD6C0A3002FA3B6 /* QuotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE391BD6C0A3002FA3B6 /* QuotesManager.swift */; settings = {ASSET_TAGS = (); }; };
+		298FBE3C1BD6C9B7002FA3B6 /* QuotesDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE3B1BD6C9B7002FA3B6 /* QuotesDict.swift */; settings = {ASSET_TAGS = (); }; };
+		298FBE3E1BD6CC72002FA3B6 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE3D1BD6CC72002FA3B6 /* Price.swift */; settings = {ASSET_TAGS = (); }; };
 		29DFFA341BD6977200BED6A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DFFA331BD6977200BED6A6 /* AppDelegate.swift */; };
 		29DFFA361BD6977200BED6A6 /* StocksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */; };
 		29DFFA391BD6977200BED6A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29DFFA371BD6977200BED6A6 /* Main.storyboard */; };
@@ -30,6 +33,9 @@
 		298FBE311BD6A2AD002FA3B6 /* Info-watchOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
 		298FBE321BD6A2AD002FA3B6 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 		298FBE331BD6A2AD002FA3B6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		298FBE391BD6C0A3002FA3B6 /* QuotesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesManager.swift; sourceTree = "<group>"; };
+		298FBE3B1BD6C9B7002FA3B6 /* QuotesDict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesDict.swift; sourceTree = "<group>"; };
+		298FBE3D1BD6CC72002FA3B6 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		29DFFA301BD6977200BED6A6 /* iOS Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DFFA331BD6977200BED6A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksListViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +85,16 @@
 			name = SwiftyJSON;
 			sourceTree = "<group>";
 		};
+		298FBE381BD6C08B002FA3B6 /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				298FBE391BD6C0A3002FA3B6 /* QuotesManager.swift */,
+				298FBE3B1BD6C9B7002FA3B6 /* QuotesDict.swift */,
+				298FBE3D1BD6CC72002FA3B6 /* Price.swift */,
+			);
+			name = Quotes;
+			sourceTree = "<group>";
+		};
 		29DFFA271BD6977200BED6A6 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */,
-				298FBE2A1BD69CBA002FA3B6 /* Shareville */,
 				298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */,
+				298FBE381BD6C08B002FA3B6 /* Quotes */,
+				298FBE2A1BD69CBA002FA3B6 /* Shareville */,
 				29DFFA371BD6977200BED6A6 /* Main.storyboard */,
 				29DFFA451BD6983600BED6A6 /* Supporting Files */,
 			);
@@ -196,7 +213,10 @@
 				298FBE2C1BD69D30002FA3B6 /* SharevilleStock.swift in Sources */,
 				298FBE271BD69C45002FA3B6 /* StockTableViewCell.swift in Sources */,
 				298FBE371BD6A2AD002FA3B6 /* SwiftyJSON.swift in Sources */,
+				298FBE3C1BD6C9B7002FA3B6 /* QuotesDict.swift in Sources */,
+				298FBE3E1BD6CC72002FA3B6 /* Price.swift in Sources */,
 				298FBE291BD69CAA002FA3B6 /* SharevilleManager.swift in Sources */,
+				298FBE3A1BD6C0A3002FA3B6 /* QuotesManager.swift in Sources */,
 				29DFFA341BD6977200BED6A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

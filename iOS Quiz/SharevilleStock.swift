@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SharevilleStock {
+class SharevilleStock {
     
     // MARK: Properties according to Shareville response JSON
     
@@ -33,6 +33,9 @@ struct SharevilleStock {
     var currency: String!
     var country: String!
     
+    // MARK: Property for storing Price
+    
+    var price: Price!
     
     // MARK: Init
     

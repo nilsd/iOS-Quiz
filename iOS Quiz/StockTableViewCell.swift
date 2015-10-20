@@ -24,16 +24,15 @@ class StockTableViewCell: UITableViewCell {
     @IBOutlet weak var priceActInd: UIActivityIndicatorView!
     
     
-    // MARK: Functions for adding data to cell
-    
-    // Add data from Shareville Stock object
+    // MARK: Function for adding data to cell
     
     func populateWithSharevilleData(data: SharevilleStock) {
         sharevilleData = data
         
         self.symbolLabel.text = self.sharevilleData.symbol
         self.nameLabel.text = self.sharevilleData.name
-        
-        self.priceActInd.startAnimating()
+                
+        self.priceLabel.text = data.price.currentPrice + " USD"
+        self.yieldLabel.text = data.price.change + "%"
     }
 }

@@ -8,10 +8,14 @@
 
 import UIKit
 
-class StocksListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SharevilleManagerDelegate {
+class StocksListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SharevilleManagerDelegate, QuotesManagerDelegate {
+    
+    // MARK: Properties
     
     let sharevilleManager = SharevilleManager()
-    var shareVilleData = [SharevilleStock]()
+    var sharevilleData = [SharevilleStock]()
+    
+    let quotesManager = QuotesManager()
     
     
     // MARK: Outlets
@@ -22,22 +26,15 @@ class StocksListViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         
         self.sharevilleManager.delegate = self
+        self.quotesManager.delegate = self
         sharevilleManager.fetchAllData()
     }
     
     
     // MARK: UITableView delegate methods
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("StockTableViewCell") as! StockTableViewCell
-        
-        cell.populateWithSharevilleData(shareVilleData[indexPath.row])
-        
-        return cell
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shareVilleData.count
+        return sharevilleData.count
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -46,6 +43,18 @@ class StocksListViewController: UIViewController, UITableViewDataSource, UITable
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("StockTableViewCell") as! StockTableViewCell
+        
+        cell.populateWithSharevilleData(sharevilleData[indexPath.row])
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     
@@ -58,7 +67,27 @@ class StocksListViewController: UIViewController, UITableViewDataSource, UITable
     func shareville(manager: SharevilleManager, didFinishFetchingData data: [SharevilleStock], error: NSError?) {
         print("Finished fetching data from Shareville")
         
-        self.shareVilleData = data
+        self.sharevilleData = data
+        
+        quotesManager.fetchQuotes(self.sharevilleData)
+    }
+    
+    
+    // MARK: QuotesManager delegate methods
+    
+    func quotes(manager: QuotesManager, didStartFetchingData error: NSError?) {
+        print("Fetching data from QuotesManager...")
+    }
+    
+    func quotes(manager: QuotesManager, didFinishFetchingData data: QuotesDict, error: NSError?) {
+        print("Finished fetching data from QuotesManager")
+        
+        for stock in self.sharevilleData {
+            if let price = data[stock.symbol] {
+                stock.price = price
+            }
+        }
+        
         self.stocksTableView.reloadData()
     }
 }

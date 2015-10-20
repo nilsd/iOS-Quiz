@@ -41,8 +41,6 @@ class SharevilleManager {
         let url = "\(baseUrl)\(self.stockIds[stockIdsIndex])"
         let request = NSMutableURLRequest(URL: NSURL(string: url)!)
         
-        print("Fetching data from \(url)")
-        
         let session = NSURLSession.sharedSession()
         request.HTTPMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -53,9 +51,7 @@ class SharevilleManager {
                 print("Error when fetching data: \(error)")
                 return
             }
-            
-            print("Got data")
-            
+                        
             let json = JSON(data: data!)
             
             // Check if request was somewhat OK by parsing a non-optional Shareville value like 'id'
@@ -83,11 +79,11 @@ class SharevilleManager {
     // MARK: Public functions
     
     func fetchAllData() {
-        delegate?.shareville(self, didStartFetchingData: nil)
+        self.delegate?.shareville(self, didStartFetchingData: nil)
         
         self.fetchedData = [SharevilleStock]()
         
         // Starts fetching data one by one
-        fetchOne(0)
+        self.fetchOne(0)
     }
 }

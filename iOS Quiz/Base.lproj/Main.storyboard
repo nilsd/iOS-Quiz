@@ -50,35 +50,30 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tni-xh-mpb" userLabel="Price Wrapper">
                                                     <rect key="frame" x="212" y="8" width="100" height="43"/>
                                                     <subviews>
-                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbF-Fo-m4W">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="fbF-Fo-m4W">
                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lW-fe-GcB">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lW-fe-GcB">
                                                             <rect key="frame" x="0.0" y="26" width="100" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="I81-ms-ecR">
-                                                            <rect key="frame" x="72" y="12" width="20" height="20"/>
-                                                        </activityIndicatorView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="0lW-fe-GcB" secondAttribute="bottom" id="AAl-F6-Tv8"/>
                                                         <constraint firstItem="fbF-Fo-m4W" firstAttribute="top" secondItem="tni-xh-mpb" secondAttribute="top" id="FeF-TM-Awh"/>
                                                         <constraint firstItem="fbF-Fo-m4W" firstAttribute="leading" secondItem="tni-xh-mpb" secondAttribute="leading" id="LFN-zS-TVN"/>
-                                                        <constraint firstItem="I81-ms-ecR" firstAttribute="centerY" secondItem="tni-xh-mpb" secondAttribute="centerY" id="Oxv-Qd-BqR"/>
                                                         <constraint firstItem="0lW-fe-GcB" firstAttribute="leading" secondItem="tni-xh-mpb" secondAttribute="leading" id="QC5-XX-ej8"/>
                                                         <constraint firstItem="0lW-fe-GcB" firstAttribute="height" secondItem="tni-xh-mpb" secondAttribute="height" multiplier="0.3" constant="4.0999999999999996" id="YaT-pF-rZh"/>
                                                         <constraint firstAttribute="width" constant="100" id="cmX-fH-jaW"/>
                                                         <constraint firstAttribute="trailing" secondItem="0lW-fe-GcB" secondAttribute="trailing" id="jEq-WH-yyK"/>
                                                         <constraint firstAttribute="trailing" secondItem="fbF-Fo-m4W" secondAttribute="trailing" id="qn1-yq-Yaa"/>
                                                         <constraint firstItem="fbF-Fo-m4W" firstAttribute="height" secondItem="tni-xh-mpb" secondAttribute="height" multiplier="0.7" id="xgY-hU-6ig"/>
-                                                        <constraint firstItem="I81-ms-ecR" firstAttribute="trailing" secondItem="tni-xh-mpb" secondAttribute="trailingMargin" id="xwi-CX-fDp"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -97,7 +92,6 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="nameLabel" destination="cFh-yK-ptD" id="xws-mh-WdQ"/>
-                                            <outlet property="priceActInd" destination="I81-ms-ecR" id="Y5W-qm-kBG"/>
                                             <outlet property="priceLabel" destination="fbF-Fo-m4W" id="IsN-SY-qZS"/>
                                             <outlet property="symbolLabel" destination="wJM-Ae-j1x" id="RWS-z8-pGh"/>
                                             <outlet property="yieldLabel" destination="0lW-fe-GcB" id="Kq3-an-Kqf"/>
