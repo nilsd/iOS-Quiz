@@ -13,51 +13,57 @@ protocol QuotesManagerDelegate {
     func quotes(manager: QuotesManager, didFinishFetchingData data: QuotesDict, error: NSError?) -> Void
 }
 
+enum YahooQuoteProperty: String {
+    case Symbol = "s"
+    case LastTradePriceOnly = "l1"
+    case ChangeInPercent = "p2"
+    case Currency = "c4"
+    
+    static let all = [Symbol, LastTradePriceOnly, ChangeInPercent, Currency]
+}
+
 class QuotesManager {
     
     // MARK: Properties
     
     var delegate: QuotesManagerDelegate?
     
-    let baseUrl = "https://query.yahooapis.com/v1/public/yql?q=" + "select * from yahoo.finance.quote where symbol in ".stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
-    let endUrl = "&format=json&env=store://datatables.org/alltableswithkeys".stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
+    let baseUrl = "https://download.finance.yahoo.com/d/quotes.csv?f="
     
     var fetchedQuotes: QuotesDict!
     
-    func makeSymbolsString(sharevilleStocks: [SharevilleStock]) -> String? {
-        var symbolsArray = [String]()
-        
-        for stock in sharevilleStocks {
-            symbolsArray.append("\"\(stock.symbol)\"")
-        }
-        
-        var string = "("
-        string += symbolsArray.joinWithSeparator(",")
-        string += ")"
-        
-        return string
-    }
+
+    // MARK: Url request
     
     func fetchQuotes(sharevilleStocks: [SharevilleStock]) {
         self.delegate?.quotes(self, didStartFetchingData: nil)
         
+        // Reset self.fetchedQuotes
         self.fetchedQuotes = QuotesDict()
         
-        var symbolsString = self.makeSymbolsString(sharevilleStocks)
+        // Build url
+        var url = self.baseUrl
         
+        // Set query properties
+        for prop in YahooQuoteProperty.all {
+            url += prop.rawValue
+        }
+        
+        // Make comma separated list of stock symbols
+        let symbolsString = self.makeSymbolsString(sharevilleStocks)
+
         if (symbolsString == nil) {
             print("Symbols string error")
             return
         }
         
-        symbolsString = symbolsString!.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
+        url += "&s=" + symbolsString!
         
-        let url = "\(self.baseUrl)\(symbolsString!)\(self.endUrl)"
+        // Create request
         let request = NSMutableURLRequest(URL: NSURL(string: url)!)
         
         let session = NSURLSession.sharedSession()
         request.HTTPMethod = "GET"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.timeoutInterval = 10
         
         let task = session.dataTaskWithRequest(request) { data, response, error in
@@ -65,23 +71,50 @@ class QuotesManager {
                 print("Error when fetching data: \(error)")
                 return
             }
-                        
-            let json = JSON(data: data!)
             
-            if let quotes = json["query"]["results"]["quote"].array {
-                for quoteData in quotes {
-                    let symbol = quoteData["symbol"].string
-                    
-                    let currentPrice = quoteData["LastTradePriceOnly"].string
-                    let change = quoteData["Change"].string
-                    
-                    self.fetchedQuotes[symbol!] = Price(currentPrice: currentPrice, change: change)
-                }
+            let dataArray = self.csvDataToArray(data!)
+            
+            for var obj in dataArray {
+                let symbol = obj[YahooQuoteProperty.Symbol.hashValue].replace("\"", withString: "")
+                let currentPrice = obj[YahooQuoteProperty.LastTradePriceOnly.hashValue].replace("\"", withString: "")
+                let change = obj[YahooQuoteProperty.ChangeInPercent.hashValue].replace("\"", withString: "")
+                let currency = obj[YahooQuoteProperty.Currency.hashValue].replace("\"", withString: "")
                 
-                self.delegate?.quotes(self, didFinishFetchingData: self.fetchedQuotes, error: nil)
+                self.fetchedQuotes[symbol] = Price(currentPrice: currentPrice, change: change, currency: currency)
             }
+            
+            self.delegate?.quotes(self, didFinishFetchingData: self.fetchedQuotes, error: nil)
         }
         
         task.resume()
+    }
+    
+    
+    // MARK: Utility functions
+    
+    func makeSymbolsString(sharevilleStocks: [SharevilleStock]) -> String? {
+        var symbolsArray = [String]()
+        
+        for stock in sharevilleStocks {
+            symbolsArray.append(stock.symbol)
+        }
+        
+        let string = symbolsArray.joinWithSeparator(",")
+        
+        return string.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
+    }
+    
+    func csvDataToArray(csv: NSData) -> [Array<String>] {
+        let dataString = NSString(data: csv, encoding: NSUTF8StringEncoding) as! String
+        var allData = [Array<String>]()
+        
+        let rows = dataString.characters.split{$0 == "\n"}.map(String.init)
+        
+        for row in rows {
+            let stock = row.characters.split{$0 == ","}.map(String.init)
+            allData.append(stock)
+        }
+        
+        return allData
     }
 }

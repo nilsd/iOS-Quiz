@@ -28,11 +28,15 @@ class StockTableViewCell: UITableViewCell {
     
     func populateWithSharevilleData(data: SharevilleStock) {
         sharevilleData = data
-        
+                
         self.symbolLabel.text = self.sharevilleData.symbol
         self.nameLabel.text = self.sharevilleData.name
-                
-        self.priceLabel.text = data.price.currentPrice + " USD"
-        self.yieldLabel.text = data.price.change + "%"
+        
+        if (data.price == nil) {
+            self.yieldLabel.text = "No data"
+        } else {
+            self.priceLabel.text = "\(data.price.currentPrice) \(data.price.currency)"
+            self.yieldLabel.text = data.price.change
+        }
     }
 }
