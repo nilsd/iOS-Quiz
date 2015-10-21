@@ -22,6 +22,14 @@ enum YahooQuoteProperty: String {
     case Currency = "c4"
     
     static let all = [Symbol, LastTradePriceOnly, ChangeInPercent, Currency]
+    
+    static func indexValue(prop: YahooQuoteProperty) -> Int? {
+        for i in 0...all.count {
+            if (prop.rawValue == all[i].rawValue) { return i }
+        }
+        
+        return nil
+    }
 }
 
 class QuotesManager {
@@ -73,10 +81,10 @@ class QuotesManager {
         let dataArray = self.csvDataToArray(data!)
         
         for var obj in dataArray {
-            let symbol = obj[YahooQuoteProperty.Symbol.hashValue].replace("\"", withString: "")
-            let currentPrice = obj[YahooQuoteProperty.LastTradePriceOnly.hashValue].replace("\"", withString: "")
-            let change = obj[YahooQuoteProperty.ChangeInPercent.hashValue].replace("\"", withString: "")
-            let currency = obj[YahooQuoteProperty.Currency.hashValue].replace("\"", withString: "")
+            let symbol = obj[YahooQuoteProperty.indexValue(YahooQuoteProperty.Symbol)!].replace("\"", withString: "")
+            let currentPrice = obj[YahooQuoteProperty.indexValue(YahooQuoteProperty.LastTradePriceOnly)!].replace("\"", withString: "")
+            let change = obj[YahooQuoteProperty.indexValue(YahooQuoteProperty.ChangeInPercent)!].replace("\"", withString: "")
+            let currency = obj[YahooQuoteProperty.indexValue(YahooQuoteProperty.Currency)!].replace("\"", withString: "")
             
             self.fetchedQuotes[symbol] = Price(currentPrice: currentPrice, change: change, currency: currency)
         }
