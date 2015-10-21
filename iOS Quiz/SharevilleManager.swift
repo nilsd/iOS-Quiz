@@ -18,8 +18,8 @@ class SharevilleManager {
     // MARK: Properties
     
     var delegate: SharevilleManagerDelegate?
-    
     let baseUrl = "https://www.shareville.se/api/v1/marketflow/instruments/"
+    var fetchedData: [SharevilleStock]!
     
     let stockIds = [
         "apple-inc",
@@ -31,8 +31,6 @@ class SharevilleManager {
         "google-inc-class-a",
         "amazoncom-inc"
     ]
-    
-    var fetchedData: [SharevilleStock]!
     
     
     // MARK: Url request

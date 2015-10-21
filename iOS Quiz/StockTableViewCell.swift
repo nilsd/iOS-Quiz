@@ -10,11 +10,6 @@ import UIKit
 
 class StockTableViewCell: UITableViewCell {
     
-    // MARK: Properties
-    
-    var sharevilleData: SharevilleStock!
-    
-
     // MARK: Outlets
     
     @IBOutlet weak var symbolLabel: UILabel!
@@ -24,6 +19,11 @@ class StockTableViewCell: UITableViewCell {
     @IBOutlet weak var priceActInd: UIActivityIndicatorView!
     
     
+    // MARK: Properties
+    
+    var sharevilleData: SharevilleStock!
+    
+
     // MARK: Function for adding data to cell
     
     func populateWithSharevilleData(data: SharevilleStock) {

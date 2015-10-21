@@ -80,6 +80,41 @@
 			name = "Static Data";
 			sourceTree = "<group>";
 		};
+		294383091BD7DB4A00A6562B /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+				298FBE381BD6C08B002FA3B6 /* Quotes */,
+				298FBE2A1BD69CBA002FA3B6 /* Shareville */,
+			);
+			name = "Data Managers";
+			sourceTree = "<group>";
+		};
+		2943830A1BD7DB5800A6562B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2943830B1BD7DB7B00A6562B /* StocksListView */,
+				2943830C1BD7DB9500A6562B /* DetailView */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2943830B1BD7DB7B00A6562B /* StocksListView */ = {
+			isa = PBXGroup;
+			children = (
+				29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */,
+				298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */,
+			);
+			name = StocksListView;
+			sourceTree = "<group>";
+		};
+		2943830C1BD7DB9500A6562B /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				294383041BD7CBFC00A6562B /* DetailViewController.swift */,
+			);
+			name = DetailView;
+			sourceTree = "<group>";
+		};
 		298FBE2A1BD69CBA002FA3B6 /* Shareville */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,14 +181,10 @@
 		29DFFA321BD6977200BED6A6 /* iOS Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				294383061BD7CE4900A6562B /* Static Data */,
+				2943830A1BD7DB5800A6562B /* Views */,
 				29AC5E3F1BD7B8F10004F76D /* UI Elements */,
-				29231BC01BD7069400489060 /* Extensions */,
-				29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */,
-				298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */,
-				294383041BD7CBFC00A6562B /* DetailViewController.swift */,
-				298FBE381BD6C08B002FA3B6 /* Quotes */,
-				298FBE2A1BD69CBA002FA3B6 /* Shareville */,
+				294383091BD7DB4A00A6562B /* Data Managers */,
+				294383061BD7CE4900A6562B /* Static Data */,
 				29DFFA371BD6977200BED6A6 /* Main.storyboard */,
 				29DFFA451BD6983600BED6A6 /* Supporting Files */,
 			);
@@ -163,6 +194,7 @@
 		29DFFA451BD6983600BED6A6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				29231BC01BD7069400489060 /* Extensions */,
 				298FBE2D1BD6A298002FA3B6 /* Frameworks */,
 				29DFFA3F1BD6977200BED6A6 /* Info.plist */,
 				29DFFA3C1BD6977200BED6A6 /* LaunchScreen.storyboard */,

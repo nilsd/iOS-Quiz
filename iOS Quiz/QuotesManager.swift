@@ -13,6 +13,8 @@ protocol QuotesManagerDelegate {
     func quotes(manager: QuotesManager, didFinishFetchingData data: QuotesDict, error: NSError?) -> Void
 }
 
+
+// Fields for querying Yahoo Finance
 enum YahooQuoteProperty: String {
     case Symbol = "s"
     case LastTradePriceOnly = "l1"
@@ -27,9 +29,7 @@ class QuotesManager {
     // MARK: Properties
     
     var delegate: QuotesManagerDelegate?
-    
     let baseUrl = "https://download.finance.yahoo.com/d/quotes.csv?f="
-    
     var fetchedQuotes: QuotesDict!
     
 

@@ -10,7 +10,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    // MARK: Outlets
+    
     @IBOutlet weak var infoTextView: UITextView!
+    
+    
+    // MARK: Properties
     
     var sharevilleData: SharevilleStock!
     let companyDescriptions = CompanyDescriptions()
