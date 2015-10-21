@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		29231BC21BD706A100489060 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29231BC11BD706A100489060 /* String.swift */; settings = {ASSET_TAGS = (); }; };
+		294383051BD7CBFC00A6562B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294383041BD7CBFC00A6562B /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		294383081BD7CE5600A6562B /* StockDescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294383071BD7CE5600A6562B /* StockDescriptions.swift */; settings = {ASSET_TAGS = (); }; };
 		298FBE271BD69C45002FA3B6 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		298FBE291BD69CAA002FA3B6 /* SharevilleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE281BD69CAA002FA3B6 /* SharevilleManager.swift */; settings = {ASSET_TAGS = (); }; };
 		298FBE2C1BD69D30002FA3B6 /* SharevilleStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE2B1BD69D30002FA3B6 /* SharevilleStock.swift */; settings = {ASSET_TAGS = (); }; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		29231BC11BD706A100489060 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		294383041BD7CBFC00A6562B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		294383071BD7CE5600A6562B /* StockDescriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockDescriptions.swift; sourceTree = "<group>"; };
 		298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
 		298FBE281BD69CAA002FA3B6 /* SharevilleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharevilleManager.swift; sourceTree = "<group>"; };
 		298FBE2B1BD69D30002FA3B6 /* SharevilleStock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharevilleStock.swift; sourceTree = "<group>"; };
@@ -66,6 +70,14 @@
 				29231BC11BD706A100489060 /* String.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		294383061BD7CE4900A6562B /* Static Data */ = {
+			isa = PBXGroup;
+			children = (
+				294383071BD7CE5600A6562B /* StockDescriptions.swift */,
+			);
+			name = "Static Data";
 			sourceTree = "<group>";
 		};
 		298FBE2A1BD69CBA002FA3B6 /* Shareville */ = {
@@ -134,10 +146,12 @@
 		29DFFA321BD6977200BED6A6 /* iOS Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				294383061BD7CE4900A6562B /* Static Data */,
 				29AC5E3F1BD7B8F10004F76D /* UI Elements */,
 				29231BC01BD7069400489060 /* Extensions */,
 				29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */,
 				298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */,
+				294383041BD7CBFC00A6562B /* DetailViewController.swift */,
 				298FBE381BD6C08B002FA3B6 /* Quotes */,
 				298FBE2A1BD69CBA002FA3B6 /* Shareville */,
 				29DFFA371BD6977200BED6A6 /* Main.storyboard */,
@@ -234,12 +248,14 @@
 				29DFFA361BD6977200BED6A6 /* StocksListViewController.swift in Sources */,
 				298FBE2C1BD69D30002FA3B6 /* SharevilleStock.swift in Sources */,
 				29231BC21BD706A100489060 /* String.swift in Sources */,
+				294383051BD7CBFC00A6562B /* DetailViewController.swift in Sources */,
 				29AC5E411BD7B92D0004F76D /* LoadingView.swift in Sources */,
 				298FBE271BD69C45002FA3B6 /* StockTableViewCell.swift in Sources */,
 				298FBE371BD6A2AD002FA3B6 /* SwiftyJSON.swift in Sources */,
 				298FBE3C1BD6C9B7002FA3B6 /* QuotesDict.swift in Sources */,
 				298FBE3E1BD6CC72002FA3B6 /* Price.swift in Sources */,
 				298FBE291BD69CAA002FA3B6 /* SharevilleManager.swift in Sources */,
+				294383081BD7CE5600A6562B /* StockDescriptions.swift in Sources */,
 				298FBE3A1BD6C0A3002FA3B6 /* QuotesManager.swift in Sources */,
 				29DFFA341BD6977200BED6A6 /* AppDelegate.swift in Sources */,
 			);

@@ -1,0 +1,28 @@
+//
+//  CompanyDescriptions.swift
+//  iOS Quiz
+//
+//  Created by Nils Dunsö on 2015-10-21.
+//  Copyright © 2015 Dunso. All rights reserved.
+//
+
+import Foundation
+
+typealias StockSymbol = String
+typealias CompanyDescription = String
+
+struct CompanyDescriptions {
+    var all: [StockSymbol:CompanyDescription]!
+    
+    init() {
+        self.all = [
+            "AAPL": "Apple Inc. is an American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics, computer software, and online services. Its best-known hardware products are the Mac personal computers, the iPod portable media player, the iPhone smartphone, the iPad tablet computer, and the Apple Watch smartwatch. Apple's consumer software includes the OS X and iOS operating systems, the iTunes media player, the Safari web browser, and the iLife and iWork creativity and productivity suites. Its online services include the iTunes Store, the iOS App Store and Mac App Store, and iCloud.",
+            "AMZN": "Amazon.com, Inc. is an American electronic commerce and cloud computing company with headquarters in Seattle, Washington. It is the largest Internet-based retailer in the United States. Amazon.com started as an online bookstore, later diversifying to sell DVDs, Blu-rays, CDs, video downloads/streaming, MP3 downloads/streaming, software, video games, electronics, apparel, furniture, food, toys and jewelry. The company also produces consumer electronics—notably, Amazon Kindle e-book readers, Fire tablets, Fire TV and Fire Phone—and is the world's largest provider of cloud infrastructure services (IaaS). Amazon also sells certain low-end products like USB cables under its in-house brand AmazonBasics.",
+            "DIS": "The Walt Disney Company, commonly known as Disney, is an American diversified multinational mass media and entertainment conglomerate headquartered at the Walt Disney Studios in Burbank, California. It is the world's second largest media conglomerate in terms of revenue, after Comcast. Disney was founded on October 16, 1923, by Walt Disney and Roy O. Disney as the Disney Brothers Cartoon Studio, and established itself as a leader in the American animation industry before diversifying into live-action film production, television, and theme parks. The company also operated under the names The Walt Disney Studio, then Walt Disney Productions. Taking on its current name in 1986, it expanded its existing operations and also started divisions focused upon theater, radio, music, publishing, and online media.",
+            "FB": "Facebook is an online social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes. The founders had initially limited the website's membership to Harvard students, but later expanded it to colleges in the Boston area, the Ivy League, and Stanford University. It gradually added support for students at various other universities and later to high-school students. Since 2006, anyone who is at least 13 years old was allowed to become a registered user of the website, though the age requirement may be higher depending on applicable local laws. Its name comes from a colloquialism for the directory given to it by American universities' students.",
+            "MSFT": "Microsoft Corporation (commonly referred to as Microsoft) is an American multinational technology company headquartered in Redmond, Washington, that develops, manufactures, licenses, supports and sells computer software, consumer electronics and personal computers and services. Its best known software products are the Microsoft Windows line of operating systems, Microsoft Office office suite, and Internet Explorer and Edge web browsers. Its flagship hardware products are the Xbox game consoles and the Microsoft Surface tablet lineup. It is the world's largest software maker measured by revenues. It is also one of the world's most valuable companies.",
+            "NFLX": "Netflix Inc. is an international provider of on-demand Internet streaming media available to viewers in all of North and South America, Australia, New Zealand, Japan, and parts of Europe (Denmark, France, Germany, The Netherlands, Norway, Sweden, Finland, Switzerland, Austria, Belgium, Luxembourg, Spain, Ireland and United Kingdom), and of flat rate DVD-by-mail in the United States, where mailed DVDs and Blu-ray are sent via Permit Reply Mail. The company was established in 1997 and is headquartered in Los Gatos, California. It started its subscription-based service in 1999. By 2009, Netflix was offering a collection of 100,000 titles on DVD and had surpassed 10 million subscribers.",
+            "YHOO": "Yahoo Inc. (styled as Yahoo!) is an American multinational technology company headquartered in Sunnyvale, California. It is globally known for its Web portal, search engine Yahoo! Search, and related services, including Yahoo! Directory, Yahoo! Mail, Yahoo! News, Yahoo! Finance, Yahoo! Groups, Yahoo! Answers, advertising, online mapping, video sharing, fantasy sports and its social media website. It is one of the most popular sites in the United States. According to third-party web analytics providers, Alexa and SimilarWeb, Yahoo! is the highest-read news and media website, with over 7 billion readers per month, being the fourth most visited website globally, as of June 2015. According to news sources, roughly 700 million people visit Yahoo websites every month."
+        ]
+    }
+}

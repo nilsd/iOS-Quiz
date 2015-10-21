@@ -95,7 +95,7 @@
                                             <outlet property="priceLabel" destination="fbF-Fo-m4W" id="IsN-SY-qZS"/>
                                             <outlet property="symbolLabel" destination="wJM-Ae-j1x" id="RWS-z8-pGh"/>
                                             <outlet property="yieldLabel" destination="0lW-fe-GcB" id="Kq3-an-Kqf"/>
-                                            <segue destination="CqZ-eE-Deq" kind="show" id="mle-o2-YTz"/>
+                                            <segue destination="CqZ-eE-Deq" kind="show" identifier="DetailSegue" id="mle-o2-YTz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="1258" y="441"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="yH2-5x-oLZ">
             <objects>
-                <viewController id="CqZ-eE-Deq" sceneMemberID="viewController">
+                <viewController id="CqZ-eE-Deq" customClass="DetailViewController" customModule="iOS_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HmB-j3-gk1"/>
                         <viewControllerLayoutGuide type="bottom" id="a7M-8u-Xzf"/>
@@ -133,9 +133,25 @@
                     <view key="view" contentMode="scaleToFill" id="jjo-yc-h9Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jkq-gp-82N">
+                                <rect key="frame" x="8" y="64" width="304" height="416"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a7M-8u-Xzf" firstAttribute="top" secondItem="Jkq-gp-82N" secondAttribute="bottom" id="PQB-hf-BXi"/>
+                            <constraint firstItem="Jkq-gp-82N" firstAttribute="leading" secondItem="jjo-yc-h9Z" secondAttribute="leadingMargin" constant="-8" id="V7H-73-W1I"/>
+                            <constraint firstItem="Jkq-gp-82N" firstAttribute="top" secondItem="HmB-j3-gk1" secondAttribute="bottom" id="VBL-D3-P6G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jkq-gp-82N" secondAttribute="trailing" constant="-8" id="nId-1U-OWB"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="infoTextView" destination="Jkq-gp-82N" id="Q5F-2z-UNn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5uN-Ty-aCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

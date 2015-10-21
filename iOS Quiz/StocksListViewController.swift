@@ -64,7 +64,7 @@ class StocksListViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-    
+
     
     // MARK: SharevilleManager delegate methods
     
@@ -100,6 +100,17 @@ class StocksListViewController: UIViewController, UITableViewDataSource, UITable
             self.loadingView.stop()
             self.stocksTableView.reloadData()
         });
+    }
+    
+    
+    // MARK: Segue to DetailView
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "DetailSegue") {
+            let cell = sender as! StockTableViewCell
+            let vc = segue.destinationViewController as! DetailViewController
+            vc.sharevilleData = cell.sharevilleData
+        }
     }
 }
 

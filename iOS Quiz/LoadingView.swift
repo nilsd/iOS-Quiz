@@ -32,6 +32,7 @@ class LoadingView: UIView {
         self.addSubview(darkView)
         
         self.actInd.frame = self.frame
+        self.actInd.hidesWhenStopped = true
         
         self.addSubview(actInd)
     }
