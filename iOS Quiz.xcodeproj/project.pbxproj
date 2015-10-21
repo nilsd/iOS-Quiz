@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		29231BC21BD706A100489060 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29231BC11BD706A100489060 /* String.swift */; settings = {ASSET_TAGS = (); }; };
 		294383051BD7CBFC00A6562B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294383041BD7CBFC00A6562B /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		294383081BD7CE5600A6562B /* StockDescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294383071BD7CE5600A6562B /* StockDescriptions.swift */; settings = {ASSET_TAGS = (); }; };
+		294383081BD7CE5600A6562B /* CompanyDescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294383071BD7CE5600A6562B /* CompanyDescriptions.swift */; settings = {ASSET_TAGS = (); }; };
 		298FBE271BD69C45002FA3B6 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		298FBE291BD69CAA002FA3B6 /* SharevilleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE281BD69CAA002FA3B6 /* SharevilleManager.swift */; settings = {ASSET_TAGS = (); }; };
 		298FBE2C1BD69D30002FA3B6 /* SharevilleStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE2B1BD69D30002FA3B6 /* SharevilleStock.swift */; settings = {ASSET_TAGS = (); }; };
@@ -20,6 +20,7 @@
 		298FBE3A1BD6C0A3002FA3B6 /* QuotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE391BD6C0A3002FA3B6 /* QuotesManager.swift */; settings = {ASSET_TAGS = (); }; };
 		298FBE3C1BD6C9B7002FA3B6 /* QuotesDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE3B1BD6C9B7002FA3B6 /* QuotesDict.swift */; settings = {ASSET_TAGS = (); }; };
 		298FBE3E1BD6CC72002FA3B6 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE3D1BD6CC72002FA3B6 /* Price.swift */; settings = {ASSET_TAGS = (); }; };
+		29A0C2981BD839B600D5E377 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A0C2971BD839B600D5E377 /* Network.swift */; settings = {ASSET_TAGS = (); }; };
 		29AC5E411BD7B92D0004F76D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AC5E401BD7B92D0004F76D /* LoadingView.swift */; settings = {ASSET_TAGS = (); }; };
 		29DFFA341BD6977200BED6A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DFFA331BD6977200BED6A6 /* AppDelegate.swift */; };
 		29DFFA361BD6977200BED6A6 /* StocksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */; };
@@ -31,7 +32,7 @@
 /* Begin PBXFileReference section */
 		29231BC11BD706A100489060 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		294383041BD7CBFC00A6562B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		294383071BD7CE5600A6562B /* StockDescriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockDescriptions.swift; sourceTree = "<group>"; };
+		294383071BD7CE5600A6562B /* CompanyDescriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDescriptions.swift; sourceTree = "<group>"; };
 		298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
 		298FBE281BD69CAA002FA3B6 /* SharevilleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharevilleManager.swift; sourceTree = "<group>"; };
 		298FBE2B1BD69D30002FA3B6 /* SharevilleStock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharevilleStock.swift; sourceTree = "<group>"; };
@@ -43,6 +44,7 @@
 		298FBE391BD6C0A3002FA3B6 /* QuotesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesManager.swift; sourceTree = "<group>"; };
 		298FBE3B1BD6C9B7002FA3B6 /* QuotesDict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesDict.swift; sourceTree = "<group>"; };
 		298FBE3D1BD6CC72002FA3B6 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		29A0C2971BD839B600D5E377 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		29AC5E401BD7B92D0004F76D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		29DFFA301BD6977200BED6A6 /* iOS Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DFFA331BD6977200BED6A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,56 +74,34 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		294383061BD7CE4900A6562B /* Static Data */ = {
+		294383091BD7DB4A00A6562B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				294383071BD7CE5600A6562B /* StockDescriptions.swift */,
+				298FBE391BD6C0A3002FA3B6 /* QuotesManager.swift */,
+				298FBE281BD69CAA002FA3B6 /* SharevilleManager.swift */,
+				29A0C2971BD839B600D5E377 /* Network.swift */,
 			);
-			name = "Static Data";
+			name = Helpers;
 			sourceTree = "<group>";
 		};
-		294383091BD7DB4A00A6562B /* Data Managers */ = {
-			isa = PBXGroup;
-			children = (
-				298FBE381BD6C08B002FA3B6 /* Quotes */,
-				298FBE2A1BD69CBA002FA3B6 /* Shareville */,
-			);
-			name = "Data Managers";
-			sourceTree = "<group>";
-		};
-		2943830A1BD7DB5800A6562B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2943830B1BD7DB7B00A6562B /* StocksListView */,
-				2943830C1BD7DB9500A6562B /* DetailView */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		2943830B1BD7DB7B00A6562B /* StocksListView */ = {
+		2943830A1BD7DB5800A6562B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */,
-				298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */,
-			);
-			name = StocksListView;
-			sourceTree = "<group>";
-		};
-		2943830C1BD7DB9500A6562B /* DetailView */ = {
-			isa = PBXGroup;
-			children = (
 				294383041BD7CBFC00A6562B /* DetailViewController.swift */,
 			);
-			name = DetailView;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
-		298FBE2A1BD69CBA002FA3B6 /* Shareville */ = {
+		29820E581BD7FAE900B62A22 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				298FBE281BD69CAA002FA3B6 /* SharevilleManager.swift */,
+				298FBE3B1BD6C9B7002FA3B6 /* QuotesDict.swift */,
+				298FBE3D1BD6CC72002FA3B6 /* Price.swift */,
 				298FBE2B1BD69D30002FA3B6 /* SharevilleStock.swift */,
+				294383071BD7CE5600A6562B /* CompanyDescriptions.swift */,
 			);
-			name = Shareville;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		298FBE2D1BD6A298002FA3B6 /* Frameworks */ = {
@@ -144,22 +124,13 @@
 			name = SwiftyJSON;
 			sourceTree = "<group>";
 		};
-		298FBE381BD6C08B002FA3B6 /* Quotes */ = {
+		29AC5E3F1BD7B8F10004F76D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				298FBE391BD6C0A3002FA3B6 /* QuotesManager.swift */,
-				298FBE3B1BD6C9B7002FA3B6 /* QuotesDict.swift */,
-				298FBE3D1BD6CC72002FA3B6 /* Price.swift */,
-			);
-			name = Quotes;
-			sourceTree = "<group>";
-		};
-		29AC5E3F1BD7B8F10004F76D /* UI Elements */ = {
-			isa = PBXGroup;
-			children = (
+				298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */,
 				29AC5E401BD7B92D0004F76D /* LoadingView.swift */,
 			);
-			name = "UI Elements";
+			name = Views;
 			sourceTree = "<group>";
 		};
 		29DFFA271BD6977200BED6A6 = {
@@ -181,10 +152,10 @@
 		29DFFA321BD6977200BED6A6 /* iOS Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				2943830A1BD7DB5800A6562B /* Views */,
-				29AC5E3F1BD7B8F10004F76D /* UI Elements */,
-				294383091BD7DB4A00A6562B /* Data Managers */,
-				294383061BD7CE4900A6562B /* Static Data */,
+				29820E581BD7FAE900B62A22 /* Models */,
+				2943830A1BD7DB5800A6562B /* Controllers */,
+				29AC5E3F1BD7B8F10004F76D /* Views */,
+				294383091BD7DB4A00A6562B /* Helpers */,
 				29DFFA371BD6977200BED6A6 /* Main.storyboard */,
 				29DFFA451BD6983600BED6A6 /* Supporting Files */,
 			);
@@ -287,8 +258,9 @@
 				298FBE3C1BD6C9B7002FA3B6 /* QuotesDict.swift in Sources */,
 				298FBE3E1BD6CC72002FA3B6 /* Price.swift in Sources */,
 				298FBE291BD69CAA002FA3B6 /* SharevilleManager.swift in Sources */,
-				294383081BD7CE5600A6562B /* StockDescriptions.swift in Sources */,
+				294383081BD7CE5600A6562B /* CompanyDescriptions.swift in Sources */,
 				298FBE3A1BD6C0A3002FA3B6 /* QuotesManager.swift in Sources */,
+				29A0C2981BD839B600D5E377 /* Network.swift in Sources */,
 				29DFFA341BD6977200BED6A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +378,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "se.dunso.iOS-Quiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -417,6 +390,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "se.dunso.iOS-Quiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

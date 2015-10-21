@@ -32,7 +32,7 @@ class QuotesManager {
     let baseUrl = "https://download.finance.yahoo.com/d/quotes.csv?f="
     var fetchedQuotes: QuotesDict!
     
-
+    
     // MARK: Url request
     
     func fetchQuotes(sharevilleStocks: [SharevilleStock]) {
@@ -60,34 +60,28 @@ class QuotesManager {
         url += "&s=" + symbolsString!
         
         // Create request
-        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
-        
-        let session = NSURLSession.sharedSession()
-        request.HTTPMethod = "GET"
-        request.timeoutInterval = 10
-        
-        let task = session.dataTaskWithRequest(request) { data, response, error in
-            guard data != nil else {
-                print("Error when fetching data: \(error)")
-                self.delegate?.quotes(self, didFinishFetchingData: self.fetchedQuotes, error: error)
-                return
-            }
-            
-            let dataArray = self.csvDataToArray(data!)
-            
-            for var obj in dataArray {
-                let symbol = obj[YahooQuoteProperty.Symbol.hashValue].replace("\"", withString: "")
-                let currentPrice = obj[YahooQuoteProperty.LastTradePriceOnly.hashValue].replace("\"", withString: "")
-                let change = obj[YahooQuoteProperty.ChangeInPercent.hashValue].replace("\"", withString: "")
-                let currency = obj[YahooQuoteProperty.Currency.hashValue].replace("\"", withString: "")
-                
-                self.fetchedQuotes[symbol] = Price(currentPrice: currentPrice, change: change, currency: currency)
-            }
-            
-            self.delegate?.quotes(self, didFinishFetchingData: self.fetchedQuotes, error: nil)
+        Network.makeRequest(url, callback: self.handleNetworkResponse)
+    }
+    
+    func handleNetworkResponse(data: NSData?, response: NSURLResponse?, error: NSError?) {
+        guard data != nil else {
+            print("Error when fetching data: \(error)")
+            self.delegate?.quotes(self, didFinishFetchingData: self.fetchedQuotes, error: error)
+            return
         }
         
-        task.resume()
+        let dataArray = self.csvDataToArray(data!)
+        
+        for var obj in dataArray {
+            let symbol = obj[YahooQuoteProperty.Symbol.hashValue].replace("\"", withString: "")
+            let currentPrice = obj[YahooQuoteProperty.LastTradePriceOnly.hashValue].replace("\"", withString: "")
+            let change = obj[YahooQuoteProperty.ChangeInPercent.hashValue].replace("\"", withString: "")
+            let currency = obj[YahooQuoteProperty.Currency.hashValue].replace("\"", withString: "")
+            
+            self.fetchedQuotes[symbol] = Price(currentPrice: currentPrice, change: change, currency: currency)
+        }
+        
+        self.delegate?.quotes(self, didFinishFetchingData: self.fetchedQuotes, error: nil)
     }
     
     
