@@ -88,7 +88,9 @@ class StocksListViewController: UIViewController, UITableViewDataSource, UITable
             }
         }
         
-        self.stocksTableView.reloadData()
+        dispatch_async(dispatch_get_main_queue(), {
+            self.stocksTableView.reloadData()
+        });
     }
 }
 
