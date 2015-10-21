@@ -10,6 +10,7 @@ import UIKit
 
 class StocksListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, SharevilleManagerDelegate, QuotesManagerDelegate {
     
+    
     // MARK: Properties
     
     let sharevilleManager = SharevilleManager()
@@ -18,12 +19,19 @@ class StocksListViewController: UIViewController, UITableViewDataSource, UITable
     let quotesManager = QuotesManager()
     
     
+    // MARK: UI Elements
+    let loadingView = LoadingView()
+    
+    
     // MARK: Outlets
     
     @IBOutlet weak var stocksTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.addSubview(loadingView)
+        self.loadingView.start()
         
         self.sharevilleManager.delegate = self
         self.quotesManager.delegate = self
@@ -89,6 +97,7 @@ class StocksListViewController: UIViewController, UITableViewDataSource, UITable
         }
         
         dispatch_async(dispatch_get_main_queue(), {
+            self.loadingView.stop()
             self.stocksTableView.reloadData()
         });
     }

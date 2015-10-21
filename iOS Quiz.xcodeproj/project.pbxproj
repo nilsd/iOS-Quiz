@@ -18,6 +18,7 @@
 		298FBE3A1BD6C0A3002FA3B6 /* QuotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE391BD6C0A3002FA3B6 /* QuotesManager.swift */; settings = {ASSET_TAGS = (); }; };
 		298FBE3C1BD6C9B7002FA3B6 /* QuotesDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE3B1BD6C9B7002FA3B6 /* QuotesDict.swift */; settings = {ASSET_TAGS = (); }; };
 		298FBE3E1BD6CC72002FA3B6 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FBE3D1BD6CC72002FA3B6 /* Price.swift */; settings = {ASSET_TAGS = (); }; };
+		29AC5E411BD7B92D0004F76D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AC5E401BD7B92D0004F76D /* LoadingView.swift */; settings = {ASSET_TAGS = (); }; };
 		29DFFA341BD6977200BED6A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DFFA331BD6977200BED6A6 /* AppDelegate.swift */; };
 		29DFFA361BD6977200BED6A6 /* StocksListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */; };
 		29DFFA391BD6977200BED6A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29DFFA371BD6977200BED6A6 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		298FBE391BD6C0A3002FA3B6 /* QuotesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesManager.swift; sourceTree = "<group>"; };
 		298FBE3B1BD6C9B7002FA3B6 /* QuotesDict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesDict.swift; sourceTree = "<group>"; };
 		298FBE3D1BD6CC72002FA3B6 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		29AC5E401BD7B92D0004F76D /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		29DFFA301BD6977200BED6A6 /* iOS Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DFFA331BD6977200BED6A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksListViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 			name = Quotes;
 			sourceTree = "<group>";
 		};
+		29AC5E3F1BD7B8F10004F76D /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				29AC5E401BD7B92D0004F76D /* LoadingView.swift */,
+			);
+			name = "UI Elements";
+			sourceTree = "<group>";
+		};
 		29DFFA271BD6977200BED6A6 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		29DFFA321BD6977200BED6A6 /* iOS Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				29AC5E3F1BD7B8F10004F76D /* UI Elements */,
 				29231BC01BD7069400489060 /* Extensions */,
 				29DFFA351BD6977200BED6A6 /* StocksListViewController.swift */,
 				298FBE261BD69C45002FA3B6 /* StockTableViewCell.swift */,
@@ -223,6 +234,7 @@
 				29DFFA361BD6977200BED6A6 /* StocksListViewController.swift in Sources */,
 				298FBE2C1BD69D30002FA3B6 /* SharevilleStock.swift in Sources */,
 				29231BC21BD706A100489060 /* String.swift in Sources */,
+				29AC5E411BD7B92D0004F76D /* LoadingView.swift in Sources */,
 				298FBE271BD69C45002FA3B6 /* StockTableViewCell.swift in Sources */,
 				298FBE371BD6A2AD002FA3B6 /* SwiftyJSON.swift in Sources */,
 				298FBE3C1BD6C9B7002FA3B6 /* QuotesDict.swift in Sources */,
