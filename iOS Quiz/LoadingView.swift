@@ -13,6 +13,7 @@ class LoadingView: UIView {
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     
     var actInd = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+    var errorLabel: UILabel!
     
     override init(var frame: CGRect) {
         frame.size.width = screenSize.width
@@ -31,10 +32,17 @@ class LoadingView: UIView {
         darkView.alpha = 0.35
         self.addSubview(darkView)
         
+        // Activity indicator
         self.actInd.frame = self.frame
         self.actInd.hidesWhenStopped = true
+        self.addSubview(self.actInd)
         
-        self.addSubview(actInd)
+        // Label for error info
+        self.errorLabel = UILabel(frame: CGRect(x: 0, y: self.frame.height / 2 + 40, width: self.frame.width, height: 30))
+        self.errorLabel.textColor = UIColor.whiteColor()
+        self.errorLabel.font = UIFont(name: "Helvetica Neue", size: 18)
+        self.errorLabel.textAlignment = .Center
+        self.addSubview(self.errorLabel)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -43,6 +51,9 @@ class LoadingView: UIView {
     
     
     func start() {
+        // Reset errorLabel text
+        self.errorLabel.text = ""
+        
         UIView.animateWithDuration(0.1, animations: {
             self.alpha = 1
         })
@@ -56,5 +67,9 @@ class LoadingView: UIView {
         })
         
         self.actInd.stopAnimating()
+    }
+    
+    func setErrorText(text: String) {
+        self.errorLabel.text = text
     }
 }

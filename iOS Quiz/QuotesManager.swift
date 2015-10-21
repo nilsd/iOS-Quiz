@@ -69,6 +69,7 @@ class QuotesManager {
         let task = session.dataTaskWithRequest(request) { data, response, error in
             guard data != nil else {
                 print("Error when fetching data: \(error)")
+                self.delegate?.quotes(self, didFinishFetchingData: self.fetchedQuotes, error: error)
                 return
             }
             

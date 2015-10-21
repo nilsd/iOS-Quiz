@@ -35,7 +35,7 @@ class StocksListViewController: UIViewController, UITableViewDataSource, UITable
         
         self.sharevilleManager.delegate = self
         self.quotesManager.delegate = self
-        sharevilleManager.fetchAllData()
+        self.sharevilleManager.fetchAllData()
     }
     
     
@@ -75,9 +75,15 @@ class StocksListViewController: UIViewController, UITableViewDataSource, UITable
     func shareville(manager: SharevilleManager, didFinishFetchingData data: [SharevilleStock], error: NSError?) {
         print("Finished fetching data from Shareville")
         
+        if (error != nil) {
+            self.loadingView.setErrorText("Retrying...")
+            self.sharevilleManager.fetchAllData()
+            return
+        }
+        
         self.sharevilleData = data
         
-        quotesManager.fetchQuotes(self.sharevilleData)
+        self.quotesManager.fetchQuotes(self.sharevilleData)
     }
     
     
@@ -89,6 +95,12 @@ class StocksListViewController: UIViewController, UITableViewDataSource, UITable
     
     func quotes(manager: QuotesManager, didFinishFetchingData data: QuotesDict, error: NSError?) {
         print("Finished fetching data from QuotesManager")
+        
+        if (error != nil) {
+            self.loadingView.setErrorText("Retrying...")
+            self.quotesManager.fetchQuotes(self.sharevilleData)
+            return
+        }
         
         for stock in self.sharevilleData {
             if let price = data[stock.symbol] {

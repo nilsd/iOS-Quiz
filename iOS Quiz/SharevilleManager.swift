@@ -49,6 +49,7 @@ class SharevilleManager {
         let task = session.dataTaskWithRequest(request) { data, response, error in
             guard data != nil else {
                 print("Error when fetching data: \(error)")
+                self.delegate?.shareville(self, didFinishFetchingData: self.fetchedData, error: error)
                 return
             }
                         
