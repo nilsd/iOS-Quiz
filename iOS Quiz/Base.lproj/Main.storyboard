@@ -135,7 +135,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkq-gp-82N">
-                                <rect key="frame" x="8" y="64" width="304" height="416"/>
+                                <rect key="frame" x="4" y="0.0" width="312" height="480"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -143,9 +143,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="a7M-8u-Xzf" firstAttribute="top" secondItem="Jkq-gp-82N" secondAttribute="bottom" id="PQB-hf-BXi"/>
-                            <constraint firstItem="Jkq-gp-82N" firstAttribute="leading" secondItem="jjo-yc-h9Z" secondAttribute="leadingMargin" constant="-8" id="V7H-73-W1I"/>
-                            <constraint firstItem="Jkq-gp-82N" firstAttribute="top" secondItem="HmB-j3-gk1" secondAttribute="bottom" id="VBL-D3-P6G"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Jkq-gp-82N" secondAttribute="trailing" constant="-8" id="nId-1U-OWB"/>
+                            <constraint firstItem="Jkq-gp-82N" firstAttribute="leading" secondItem="jjo-yc-h9Z" secondAttribute="leadingMargin" constant="-12" id="V7H-73-W1I"/>
+                            <constraint firstItem="Jkq-gp-82N" firstAttribute="top" secondItem="HmB-j3-gk1" secondAttribute="bottom" constant="-64" id="VBL-D3-P6G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jkq-gp-82N" secondAttribute="trailing" constant="-12" id="nId-1U-OWB"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
